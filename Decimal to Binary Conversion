@@ -1,0 +1,26 @@
+#!/bin/bash
+# Prompt the user for the decimal number to convert
+echo "Enter a decimal number: "
+read decimal
+# Convert the decimal number to binary
+binary=""
+while [ $decimal -gt 0 ]; do
+remainder=$((decimal % 2))
+binary="$remainder$binary"
+decimal=$((decimal / 2))
+done
+# Print the binary number
+echo "The binary equivalent is: $binary"
+
+
+
+OUTPUT:
+
+
+mlm@mlm-OptiPlex-3020:~/Desktop/john$ chmod +x decimal.sh
+mlm@mlm-OptiPlex-3020:~/Desktop/john$ ./decimal.sh
+Enter a decimal number: 
+45
+The binary equivalent is: 101101
+mlm@mlm-OptiPlex-3020:~/Desktop/john$ 
+
